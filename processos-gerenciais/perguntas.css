@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.t{
+    justify-self: start;
+}
+
+.m{
+ width: 600px;
+}
+
+ul{
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0px;
+    
+}
+
+@media screen and (max-width: 800px) {
+    ul{
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px;
+        
+    }
+}
+
+.logo{
+    max-width: 25%;
+    max-width: 100%;
+    margin: 0%;
+  }
+
+.menu {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    right: 80% ;
+}
+.menu li {
+    margin: 1.5%;
+}
+
+.menu li a {
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+/*corpo*/
+.corpo{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 14%;
+}
+
+.negrito{
+    color: #152F60;
+}
+.corpo-perguntas{
+    padding: 1vw 6vh;
+    background-color: white;
+    position: sticky;
+    z-index: 1;
+    margin-top: 85px;
+    margin-bottom: 10vh;
+}
+
+.subtitulo-simulacao{
+    color: black;
+     font-size: 14px;
+     font-weight: 400;
+     word-wrap: break-word;
+    margin: 30px 0px 52px 0px;
+}
+.boleto-titulo{
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-left: 60px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+
+/*interface*/
+*{
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin:0;
+    word-wrap: break-word;
+    scroll-behavior: smooth;  /*dentro do * quer dizer pra tudo na página usar isso de padrão; scroll-behavior é o comportamento de rolagem, smooth é suavizado*/
+}
+
+
+.geral{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.header{
+    width: 100%;
+    height: 12vh;
+    display: flex!important;
+    justify-content: space-between;
+    background-color: #010101;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    align-items: center !important;
+}
+
+.logo{
+    width:123px;
+    height: 32px;
+    margin-left: 5vw;
+}
+.menu{
+    display:flex;
+    justify-content: flex-end !important;
+    column-gap: 16px;
+    margin-right: -60vw;
+}
+.menu-item{
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 40px 0px 0px;
+    height: 72%;
+}
+
+.menu-item:hover{
+    color: #FFF;
+    font-weight: 00;
+    text-decoration: underline;
+}
+
+.iconeMenu{
+    display: none;
+    filter:brightness(100%);
+    font-size: 24px;
+    color: #FFF;
+    margin-right: 10%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.conteudo{
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 120px 104px;
+    background-color: white;
+}
+
+.texto{
+    margin: -29px 0px 0px -150px;
+    color: #9A9595;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+}
+.copyright{
+    margin: 13px 0px 0px 17px;
+    color: #9A9595;
+    font-family: Fira Sans;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: absolute;
+}
+.linha{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.item-form{
+    width:48%;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#menuMobile{
+    display:none;
+}
+@media screen and (min-width:320px) and (max-width:767px){  /* configura os estilos quando celular*/
+    body{
+        width:100%;
+    }
+    .geral{
+        width: 100%;
+        height: 8vh;
+    }
+    .menu{
+        display:none;
+    }
+    .logo-nucleo{
+        margin:24px auto;
+        position: relative;
+    }
+    #menuMobile{
+        display:flex;
+        flex-direction: column;
+        row-gap: 24px;
+        width: 60vw;
+        height: 100vh;
+        position: fixed;
+        right: -100%;
+        top:0;
+        background-image: linear-gradient(to bottom, black,#09083e);
+        color: rgb(255, 255, 255);
+        z-index: 999;
+        transition: 0.5s ease-in-out;
+    
+    }
+    .close{
+        padding: 24px;
+        justify-content: flex-end !important;
+        font-size: 24px;
+    }
+    
+    .close-btn{
+        width:#fff;
+        text-align: right;
+        padding-right: 48px;
+        justify-content: flex-end !important;
+        cursor: pointer;
+    }
+    .itemMobile{
+        color:#fff; 
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .header{
+        padding: 24px;
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        margin:0;
+        left:0;
+        top:0;
+    }
+    .iconeMenu{
+        display:flex;
+        margin: -14px 40px 0px 0px;
+        font-size: 24px;
+        justify-content: center;
+    }
+
+    .conteudo{
+        padding:24px;
+
+    }
+    .menu-transições{
+        padding:24px;
+        flex-direction: column;
+    }
+    .item-transicoes{
+        width:100%;
+        max-width: unset;
+        margin: 48px 0px 0px 0px;
+        padding: 33px 0px 40px 0px;
+    }
+    .logo-fin{
+        margin: 16px 0px 16px 100px;
+    }
+    .info-footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+    .texto,.copyright{
+        width:100%;
+        position: relative;
+        margin:auto;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .logo-uniso{
+        width:100%;
+        position: relative;
+        margin: 0 auto 24px 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .Titulo-info {
+        width:100%;
+        text-align: left;
+    }
+    .preencher{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .campo-mensagem{
+        width:98%;
+    }
+    .linha{
+        margin-bottom: 0;
+    }
+
+}
+
+/*css ajustes*/
+
+.sobre{
+    margin-top: 12vh;
+    margin-right: 8vw;
+    margin-bottom: 12vh;
+    margin-left: 8vw;
+}
+
+.m-v-v{
+    background-color: #152F60;
+    padding: 8vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    gap: 2vh;
+    text-align: center;
+}
+
+.title-dark{
+    color: #152F60;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: semiBold;
+    font-size: 32px;
+    margin-bottom: 5vw;
+}
+
+p{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.icon-m-v-v{
+    color: white;
+    font-size: 40px;
+}
+
+
+.title-light{
+    color: white;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: semiBold;
+    font-size: 32px;
+    margin-bottom: 2vw;
+}
+
+.p-light{
+    font-family: Inter;
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+.p-dark{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: -1vh;
+}
+
+
+label{
+    margin-bottom: 1vh;
+}
+
+
+.footer-text{
+    color: #9A9595;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer{
+    border-top: 4px solid #152F60;
+    width: 102%;
+    height: 24vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    text-align: center;
+    align-items: center;
+}
+
+.logo-footer{
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+}
+
+.copyRight{
+    margin-bottom: 8vh;
+    margin-top: 2vh !important;
+    color: #9A9595;
+    font-family: Fira Sans;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: Inter;
+}
+
+@media screen and (min-width: 800px) {
+    
+    .title-dark{
+        margin-top: 3vw;
+    }
+}
